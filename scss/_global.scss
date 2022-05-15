@@ -109,3 +109,29 @@ body {
         background: $mainblue !important;
     }
 }
+
+.btn {
+    transition: 0.3s;
+
+    width: 185px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $mainblue;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+
+    svg {
+        margin: 0px 0px 0px 13px;
+    }
+
+    &:hover {
+        background-color: $mainblue_hover;
+    }
+
+    &:active {
+        background-color: $mainblue_active
+    }
+}
