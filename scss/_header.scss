@@ -1,0 +1,35 @@
+.header {
+    padding: 40px 0;
+    .header_container {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            transition: .3s;
+            position: relative;
+
+            &::before {
+                transition: 0.3s;
+                content: '';
+                position: absolute;
+                right: -17px;
+                bottom: 5px;
+                width: 15px;
+                height: 15px;
+                background: $mainblue;
+                border-radius: 0px 7.5px 0px 0px;
+            }
+
+            &:hover {
+                color: $white;
+                &::before {
+                    width: 110%;
+                    height: 24px;
+                    bottom: 0px;
+                    right: -5px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
