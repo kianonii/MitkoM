@@ -2,10 +2,19 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 body {
   background-color: #F3F6FC;
   color: #000000;
   font-family: 'Inter', sans-serif;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .container {
@@ -224,12 +233,61 @@ body {
 }
 
 .project__inner img {
+  width: 100%;
   margin: 0px 0px 42px 0px;
 }
 
 .project__inner .project__text {
   max-width: 400px;
   padding: 0px 0px 34px 34px;
+}
+
+.popup {
+  display: none;
+}
+
+.popup.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup.active #popup_close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  margin: 0px 0px 20px 0px;
+}
+
+.popup.active #popup_close img {
+  width: 24px;
+  height: 24px;
+}
+
+.popup.active .popup_content {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.popup.active .popup_content img {
+  width: 100%;
+  height: 100%;
 }
 
 .hero {
